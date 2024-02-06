@@ -51,6 +51,7 @@ const queryClient = useQueryClient();
       year:0,
       price :0
     })
+    setOpen(false)
   }
 
   return (

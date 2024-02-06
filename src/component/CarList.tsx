@@ -10,6 +10,7 @@ import { useState } from "react";
 import Confirmation from "./Confirmation.tsx";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import AddCar from "./AddCar.tsx";
+import EditCar from "./EditCar.tsx";
 
 
 
@@ -50,7 +51,15 @@ const CarList = () => {
     {field: 'registerNumber', headerName: 'Reg.nr.', width: 150},
     {field: 'year', headerName: 'Year', width: 150},
     {field: 'price', headerName: 'Price', width: 150},
-    //Carlist.tsx
+    { field:'edit',
+    headerName:'',
+  width:90,
+ sortable:false,
+filterable:false,
+renderCell:(params:GridCellParams)=> 
+<EditCar cardata={params.row} />
+},
+   
 {
   field: "delete",
   headerName: "",
